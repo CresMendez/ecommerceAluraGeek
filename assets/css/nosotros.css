@@ -1,0 +1,115 @@
+.nosotros{
+    background-color: #EAF2FD;
+}
+.nosotros__container{
+    padding: 2rem 0;
+}
+.nosotros__contenedor-logotitulos{
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nosotros__enlaces{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nosotros__enlaces-titulos{
+    padding: 1rem 0;
+    text-decoration: none;
+    color: #CCCCCC;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+
+.nosotros__contacto{
+    padding: 1rem 0;
+}
+.nosotros__titulo{
+    padding: .5rem 0;
+    color: #464646;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.nosotros__contacto form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.nosotros__contacto label{
+    padding: 1rem;
+    color: #464646;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.nosotros__contacto input{
+    padding: 1rem;
+    color: #464646;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.txtarea{
+    padding: 1rem 1rem;
+    margin: 1rem 0;
+    color: #464646;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.nosotros__boton{
+    text-decoration: none;
+    padding: 1rem 3.5rem;
+    color: #ffffff;
+    font-weight: 700;
+    background-color:#2A7AE4;
+    border-style: none;
+    width: 30%;
+}
+.nosotros__boton:hover{
+    cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+    .nosotros__container{
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .nosotros__contenedor-logotitulos{
+        width: 40%;
+        align-items: flex-start;
+    }
+    .nosotros__contacto{
+        width: 60%;
+    }
+    .nosotros__boton{
+        padding: 1.8rem 0;
+        width: 40%;
+        font-size: 1.5rem;
+    }
+    .txtarea{
+        height: 7rem;
+    }
+    .nosotros__enlaces-titulos{
+        padding: 2rem 0;
+        color: #464646;
+        font-size: 1.5rem;
+    }
+    .nosotros__enlaces{
+        align-items: flex-start;
+    }
+
+}
+@media screen and (min-width: 1024px) {
+    .nosotros__contacto{
+        width: 50%;
+    }
+    .nosotros__contenedor-logotitulos{
+        width: 50%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .nosotros__enlaces{
+        width: 50%;
+    }
+}
