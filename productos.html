@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/Galeria.css">
+    <link rel="stylesheet" href="./assets/css/nosotros.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="https://fontawesome.com/icons/trash?f=sharp&s=regular&pc=%232e1f51">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <div class="header__contenedor-logo">
+                    <a href="index.html">
+                        <img class="header__logo-img" src="./assets/img/logo2.png" alt="Logo-Alura-Geek">
+                    </a>
+                </div>
+            </div>            
+        </div>
+    </header>   
+    <main>
+        <section class="galeria star-wars">
+            
+            <div class="galeria__container container">
+                <h1 class="galeria__tituloPrincipal">Todos los productos</h1>
+                <div class="galeria__encabezado">
+                    <h2 class="galeria__Titulo">Star Wars</h2>
+                    <a class="galeria__link galeria-boton" href="./AgregarProducto.html">Agregar Producto</a>
+                </div>
+                <div class="galeria__productos">
+                    <ul class="galeria__productos-container" data-star>
+                    </ul>   
+                </div>
+            </div>
+        </section>
+        <section class="galeria consolas">
+            <div class="galeria__container container">
+                <div class="galeria__encabezado">
+                    <h2 class="galeria__Titulo">Consolas</h2>
+                    <!--<a class="galeria__link galeria-boton" href="./AgregarProducto.html">Agregar Producto</a>-->
+                </div>
+                <div class="galeria__productos">
+                    <ul class="galeria__productos-container" data-consolas>
+
+                    </ul>   
+                </div>
+            </div>
+        </section>
+
+
+        <section class="nosotros">
+            <div class="nosotros__container container">
+                <div class="nosotros__contenedor-logotitulos">
+                    <img class="nosotros__logo-img" src="./assets/img/Logo2.png" alt="logoAluraGeek">
+                    <div class="nosotros__enlaces">
+                        <a class="nosotros__enlaces-titulos" href="">Quienes somos</a>
+                        <a class="nosotros__enlaces-titulos" href="">Politica de privacidad</a>
+                        <a class="nosotros__enlaces-titulos" href="">Programa de fidelidad</a>
+                        <a class="nosotros__enlaces-titulos" href="">Nuestras tiendas</a>
+                        <a class="nosotros__enlaces-titulos" href="">Quiero ser franquiciado</a>
+                        <a class="nosotros__enlaces-titulos" href="">Anuncie Aqui</a>
+                    </div>
+                </div>
+                <div class="nosotros__contacto">
+                    <h3 class="nosotros__titulo">Hable con nosotros</h3>
+                    <form action="">
+                        <label for="">Nombre</label>
+                        <input class="" type="text" name="nombre" id="nombre" placeholder="Nombre"/>
+                        <textarea class="txtarea" name="" id="" cols="30" rows="10" placeholder="Escribe tu mensaje"></textarea>
+                        <button class="nosotros__boton">Enviar mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__container container">
+            <p class="footer__texto">Desarrollado por Crescencio Mendez Ara</p>
+            <p class="footer__texto">2023</p>
+        </div>
+    </footer>
+    <script type="module" src="./controllers/productosControllers.js"></script>
+</body>
+</html>

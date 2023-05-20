@@ -30,12 +30,12 @@
         <section class="agregarProducto">
             <div class="agregarProducto__container container">
                 <h1 class="agregarProducto__titulo">Agregar nuevo producto</h1>
-                <form action="">
-                   <input class="agregarProducto__url" type="text" placeholder="URL imagen">
-                   <input class="agregarProducto__categoria" type="text" placeholder="Categoria">
-                   <input class="agregarProducto__nombre" type="text" placeholder="Nomre del producto">
-                   <input class="agregarProducto__precio" type="text" placeholder="precio del producto">
-                   <textarea class="agregarProducto__descripcion" name="" id="" cols="30" rows="10" placeholder="Descripcion del producto"></textarea>
+                <form action="" data-form>
+                   <input data-URL class="agregarProducto__url" type="text" placeholder="URL imagen">
+                   <input data-categoria class="agregarProducto__categoria" type="text" placeholder="Categoria">
+                   <input data-nombre class="agregarProducto__nombre" type="text" placeholder="Nomre del producto">
+                   <input data-precio class="agregarProducto__precio" type="text" placeholder="precio del producto">
+                   <textarea data-descripcion class="agregarProducto__descripcion" name="" id="" cols="30" rows="10" placeholder="Descripcion del producto"></textarea>
 
                    <button class="login__boton">Agregar producto</button>
                 </form>
@@ -73,5 +73,12 @@ s
             <p class="footer__texto">2023</p>
         </div>
     </footer>
+
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"
+    integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"> // es para generar una id unico, id: uuid</script>
+    <script type="module" src="./controllers/crearProductosControllers.js"></script>
 </body>
 </html>

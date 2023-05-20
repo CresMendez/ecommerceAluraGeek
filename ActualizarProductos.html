@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/ActualizarProductos.css">
+    <link rel="stylesheet" href="./assets/css/nosotros.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <div class="header__contenedor-logo">
+                    <a href="index.html">
+                        <img class="header__logo-img" src="./assets/img/logo2.png" alt="Logo-Alura-Geek">
+                    </a>
+                </div>
+            </div>            
+        </div>
+    </header>   
+    <main>
+
+        <section class="actualizarProducto">
+            <div class="actualizarProducto__container container">
+                <h1 class="actualizarProducto__titulo">Actualizar producto</h1>
+                <div class="actualizarProducto__datos">
+                    <img data-img class="actualizarProducto__img" src="" alt="">
+                    <form action="" data-form>
+                        <input data-URL class="actualizarProducto__url" type="file" placeholder="URL imagen">
+                        <input data-categoria class="actualizarProducto__categoria" type="text" placeholder="Categoria">
+                        <input data-nombre class="actualizarProducto__nombre" type="text" placeholder="Nomre del producto">
+                        <input data-precio class="actualizarProducto__precio" type="text" placeholder="precio del producto">
+                        <textarea data-descripcion class="actualizarProducto__descripcion" name="" id="" cols="30" rows="10" placeholder="Descripcion del producto"></textarea>
+
+                        <button class="actualizarProducto__boton">Agregar producto</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+s
+        <section class="nosotros">
+            <div class="nosotros__container container">
+                <div class="nosotros__contenedor-logotitulos">
+                    <img class="nosotros__logo-img" src="./assets/img/Logo2.png" alt="logoAluraGeek">
+                    <div class="nosotros__enlaces">
+                        <a class="nosotros__enlaces-titulos" href="">Quienes somos</a>
+                        <a class="nosotros__enlaces-titulos" href="">Politica de privacidad</a>
+                        <a class="nosotros__enlaces-titulos" href="">Programa de fidelidad</a>
+                        <a class="nosotros__enlaces-titulos" href="">Nuestras tiendas</a>
+                        <a class="nosotros__enlaces-titulos" href="">Quiero ser franquiciado</a>
+                        <a class="nosotros__enlaces-titulos" href="">Anuncie Aqui</a>
+                    </div>
+                </div>
+                <div class="nosotros__contacto">
+                    <h3 class="nosotros__titulo">Hable con nosotros</h3>
+                    <form action="">
+                        <label for="">Nombre</label>
+                        <input class="" type="text" name="nombre" id="nombre" placeholder="Nombre"/>
+                        <textarea class="txtarea" name="" id="" cols="30" rows="10" placeholder="Escribe tu mensaje"></textarea>
+                        <button class="nosotros__boton">Enviar mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__container container">
+            <p class="footer__texto">Desarrollado por Crescencio Mendez Ara</p>
+            <p class="footer__texto">2023</p>
+        </div>
+    </footer>
+    <script type="module" src="./controllers/ActProductosControllers.js"></script>
+</body>
+</html>
