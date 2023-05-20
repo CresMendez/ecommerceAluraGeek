@@ -1,5 +1,5 @@
 //GET
-const listaProductos = () => fetch("http://localhost:3000/producto").then(respuesta => respuesta.json()).catch(error => console.log(error));
+const listaProductos = () => fetch("https://ecommerce-alura-geek-ten.vercel.app/producto").then(respuesta => respuesta.json()).catch(error => console.log(error));
 //POST  crear productos
 const crearProducto=(nombre, imgURL, precio, categoria, descripcion)=>{
     return fetch("http://localhost:3000/producto", {
@@ -19,7 +19,7 @@ const crearProducto=(nombre, imgURL, precio, categoria, descripcion)=>{
 };
 //DELETE eliminando registro `
 const eliminarProducto = (id) => {
-    return fetch(`http://localhost:3000/producto/${id}`, {
+    return fetch(`https://ecommerce-alura-geek-ten.vercel.app/producto/${id}`, {
       method: "DELETE",
     });
   };
@@ -27,7 +27,7 @@ const eliminarProducto = (id) => {
 //Get de nuevo para ver producto
 
 const verProducto = (id) => {
-    return fetch(`http://localhost:3000/producto/${id}`).then((respuesta) =>
+    return fetch(`https://ecommerce-alura-geek-ten.vercel.app/producto/${id}`).then((respuesta) =>
       respuesta.json().catch(error => console.log(error))
     );
   };
@@ -35,7 +35,7 @@ const verProducto = (id) => {
 //PUT para mostrar la infor que se va a editar
 //para actualizar los datos que viene del formulario
 const actualizarProducto = (nombre, imgURL, precio, categoria, descripcion, id) => {
-    return fetch(`http://localhost:3000/producto/${id}`, {
+    return fetch(`https://ecommerce-alura-geek-ten.vercel.app/producto/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
