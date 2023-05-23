@@ -2,19 +2,18 @@
 const listaProductos = () => fetch("https://6468d44de99f0ba0a82df5ff.mockapi.io/productos").then(respuesta => respuesta.json()).catch(error => console.log(error));
 //POST  crear productos
 const crearProducto=(nombre, imgURL, precio, categoria, descripcion)=>{
-    return fetch("https://6468d44de99f0ba0a82df5ff.mockapi.io/productos", {
+    return fetch("http://localhost:3000/producto", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
         },
         body: JSON.stringify({
-            id: uuid.v4(),
             nombre,
             imgURL,
             precio,
             categoria,
-            descripcion
-           
+            descripcion,
+            id: uuid.v4()
         }),
     });
 };
@@ -35,13 +34,13 @@ const verProducto = (id) => {
 
 //PUT para mostrar la infor que se va a editar
 //para actualizar los datos que viene del formulario
-const actualizarProducto = (id, nombre, imgURL, precio, categoria, descripcion) => {
+const actualizarProducto = (nombre, imgURL, precio, categoria, descripcion, id) => {
     return fetch(`https://6468d44de99f0ba0a82df5ff.mockapi.io/productos/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({id, nombre, imgURL, precio, categoria, descripcion }),
+      body: JSON.stringify({nombre, imgURL, precio, categoria, descripcion, id }),
     })
       .then((respuesta) => respuesta)
       .catch((err) => console.log(err));
