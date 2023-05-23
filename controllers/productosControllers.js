@@ -1,6 +1,6 @@
 import { serviciosproductos } from "../servicios/productosServicios.js";
 
-const nuevoProducto = (nombre, imgURL, precio, categoria, id) =>{
+const nuevoProducto = (id, nombre, imgURL, precio, categoria) =>{
     const card = document.createElement("li");
     card.classList.add("galeria__productos-lista");
     const contenido =
@@ -45,9 +45,9 @@ serviciosproductos.listaProductos()
     .then(async respuesta => {
         try {
 
-            await respuesta.forEach(({ nombre, imgURL, precio, categoria, id }) => {
+            await respuesta.forEach(({id, nombre, imgURL, precio, categoria  }) => {
 
-                const nuevaLinea = nuevoProducto(nombre, imgURL, precio, categoria, id);
+                const nuevaLinea = nuevoProducto(id, nombre, imgURL, precio, categoria);
 
                 switch (categoria) {
                     case 'starwars':

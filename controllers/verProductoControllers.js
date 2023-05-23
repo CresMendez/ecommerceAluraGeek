@@ -39,7 +39,7 @@ const obtenerInformacion = async() => {
   
 
   //vista similares 
-  const nuevoProducto = (nombre, imgURL, precio, categoria, id) =>{
+  const nuevoProducto = (id, nombre, imgURL, precio, categoria) =>{
     const card = document.createElement("li");
     card.classList.add("galeria__productos-lista");
     const contenido =
@@ -63,8 +63,8 @@ var contCons=0;
 serviciosproductos.listaProductos()
     .then(async respuesta => {
         try {
-            await respuesta.forEach(({ nombre, imgURL, precio, categoria, id }) => {
-                const nuevaLinea = nuevoProducto(nombre, imgURL, precio, categoria, id);
+            await respuesta.forEach(({id, nombre, imgURL, precio, categoria }) => {
+                const nuevaLinea = nuevoProducto(id, nombre, imgURL, precio, categoria);
                 
                 const url2 = new URL(window.location);
                 const id2 = url2.searchParams.get("id");
