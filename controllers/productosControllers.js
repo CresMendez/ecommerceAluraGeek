@@ -8,7 +8,7 @@ const nuevoProducto = (nombre, imgURL, precio, categoria, id) =>{
         <h2 class="galeria__producto-nombre">${nombre}</h2>
         <p class="galeria__precio">$ ${precio}</p>
         <button class="login__boton" id="${id}">Eliminar</button>
-        <a class="galeria__productos-editar" href="./actualizarproductos.html?id=${id}">Editar</a>
+        <a class="galeria__productos-editar" href="./ActualizarProductos.html?id=${id}">Editar</a>
         <a class="galeria__productos-link" href="./verProducto.html?id=${id}&categoria=${categoria}">ver producto</a>
         </li>`;
         
