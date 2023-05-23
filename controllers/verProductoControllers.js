@@ -21,6 +21,7 @@ const obtenerInformacion = async() => {
               nombre.innerHTML=producto.nombre;
               precio.innerHTML="$ "+producto.precio;
               descripcion.innerHTML=producto.descripcion;
+              console.log("entra");
               //console.log(producto.categoria);
               //GlobalCategoria = producto.categoria;
               //nombre.value = perfil.nombre;
@@ -39,7 +40,7 @@ const obtenerInformacion = async() => {
   
 
   //vista similares 
-  const nuevoProducto = (id, nombre, imgURL, precio, categoria) =>{
+  const nuevoProducto = (nombre, imgURL, precio, categoria, id) =>{
     const card = document.createElement("li");
     card.classList.add("galeria__productos-lista");
     const contenido =
@@ -63,8 +64,8 @@ var contCons=0;
 serviciosproductos.listaProductos()
     .then(async respuesta => {
         try {
-            await respuesta.forEach(({id, nombre, imgURL, precio, categoria }) => {
-                const nuevaLinea = nuevoProducto(id, nombre, imgURL, precio, categoria);
+            await respuesta.forEach(({ nombre, imgURL, precio, categoria, id }) => {
+                const nuevaLinea = nuevoProducto(nombre, imgURL, precio, categoria, id);
                 
                 const url2 = new URL(window.location);
                 const id2 = url2.searchParams.get("id");

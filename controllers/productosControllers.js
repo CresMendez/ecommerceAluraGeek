@@ -4,7 +4,7 @@ const nuevoProducto = (nombre, imgURL, precio, categoria, id) =>{
     const card = document.createElement("li");
     card.classList.add("galeria__productos-lista");
     const contenido =
-        `<img class="galeria__productos-img" src="${imgURL}" alt="starwars1">
+        `<img class="galeria__productos-img" src="${imgURL}" alt="starwars">
         <h2 class="galeria__producto-nombre">${nombre}</h2>
         <p class="galeria__precio">$ ${precio}</p>
         <button class="login__boton" id="${id}">Eliminar</button>

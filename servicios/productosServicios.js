@@ -1,8 +1,8 @@
 //GET
-const listaProductos = () => fetch("https://6468d44de99f0ba0a82df5ff.mockapi.io/productos").then(respuesta => respuesta.json()).catch(error => console.log(error));
+const listaProductos = () => fetch("https://6468d44de99f0ba0a82df5ff.mockapi.io/producto").then(respuesta => respuesta.json()).catch(error => console.log(error));
 //POST  crear productos
 const crearProducto=(nombre, imgURL, precio, categoria, descripcion)=>{
-    return fetch("http://localhost:3000/producto", {
+    return fetch("https://6468d44de99f0ba0a82df5ff.mockapi.io/producto", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -19,7 +19,7 @@ const crearProducto=(nombre, imgURL, precio, categoria, descripcion)=>{
 };
 //DELETE eliminando registro `
 const eliminarProducto = (id) => {
-    return fetch(`https://6468d44de99f0ba0a82df5ff.mockapi.io/productos/${id}`, {
+    return fetch(`https://6468d44de99f0ba0a82df5ff.mockapi.io/producto/${id}`, {
       method: "DELETE",
     });
   };
@@ -27,7 +27,7 @@ const eliminarProducto = (id) => {
 //Get de nuevo para ver producto
 
 const verProducto = (id) => {
-    return fetch(`https://6468d44de99f0ba0a82df5ff.mockapi.io/productos/${id}`).then((respuesta) =>
+    return fetch(`https://6468d44de99f0ba0a82df5ff.mockapi.io/producto/${id}`).then((respuesta) =>
       respuesta.json().catch(error => console.log(error))
     );
   };
@@ -35,7 +35,7 @@ const verProducto = (id) => {
 //PUT para mostrar la infor que se va a editar
 //para actualizar los datos que viene del formulario
 const actualizarProducto = (nombre, imgURL, precio, categoria, descripcion, id) => {
-    return fetch(`https://6468d44de99f0ba0a82df5ff.mockapi.io/productos/${id}`, {
+    return fetch(`https://6468d44de99f0ba0a82df5ff.mockapi.io/producto/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
